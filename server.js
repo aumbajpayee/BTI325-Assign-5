@@ -5,7 +5,7 @@
 * 
 *  Name: _Bajpayee Aum _ Student ID: _120685227_ Date: _ 11-20-2023 _
 *
-*  Online (Cyclic) Link: https://poised-dove-threads.cyclic.cloud/about
+*  Online (Cyclic) Link:
 
 ********************************************************************************/
 const stripJs = require("strip-js");
