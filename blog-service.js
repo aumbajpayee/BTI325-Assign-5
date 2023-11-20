@@ -2,7 +2,7 @@ const fs = require("fs");
 const Sequelize = require("sequelize");
 
 var sequelize = new Sequelize("SenecaDB", "aumbajpayee", "7I4vzUJCqtgX", {
-  host: "ep-green-cake-40317335.us-east-2.aws.neon.tech",
+  host: "ep-green-cake-40317335-pooler.us-east-2.aws.neon.tech",
   dialect: "postgres",
   port: 5432,
   dialectOptions: {
