@@ -1,0 +1,33 @@
+// Do not expose your Neon credentials to the browser
+// .env
+PGHOST='ep-green-cake-40317335.us-east-2.aws.neon.tech'
+PGDATABASE='SenecaDB'
+PGUSER='bajpayeeaum%40gmail.com'
+PGPASSWORD='15KrtSFyNmTi'
+ENDPOINT_ID='ep-green-cake-40317335'
+
+// app.js
+const postgres = require('postgres');
+require('dotenv').config();
+
+let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
+PGUSER = decodeURIComponent(PGUSER);
+
+const sql = postgres({
+  host: PGHOST,
+  database: PGDATABASE,
+  username: PGUSER,
+  password: PGPASSWORD,
+  port: 5432,
+  ssl: 'require',
+  connection: {
+    options: `project=${ENDPOINT_ID}`,
+  },
+});
+
+async function getPgVersion() {
+  const result = await sql`select version()`;
+  console.log(result);
+}
+
+getPgVersion();
