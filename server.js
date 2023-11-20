@@ -12,9 +12,11 @@ const stripJs = require("strip-js");
 const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const streamifier = require("streamifier");
+
 const express = require("express");
 const app = express();
 const path = require("path");
+
 const HTTP_PORT = process.env.PORT || 8080;
 const blogService = require("./blog-service.js");
 const exphbs = require("express-handlebars");
@@ -85,17 +87,9 @@ app.get("/", (req, res) => {
   res.redirect("/blog");
 });
 
-// app.get('/about', (req, res) => {
-//     res.sendFile(path.join(__dirname + "/views/about.html"));
-// });
-
 app.get("/about", (req, res) => {
   res.render("about");
 });
-
-// app.get('/posts/add', (req, res) => {
-//     res.render('addPost');
-// });
 
 app.get("/posts/add", async (req, res) => {
   try {
