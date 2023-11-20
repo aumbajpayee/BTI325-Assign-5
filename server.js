@@ -5,18 +5,16 @@
 * 
 *  Name: _Bajpayee Aum _ Student ID: _120685227_ Date: _ 11-20-2023 _
 *
-*  Online (Cyclic) Link:
+*  Online (Cyclic) Link: https://poised-dove-threads.cyclic.cloud/about
 
 ********************************************************************************/
 const stripJs = require("strip-js");
 const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const streamifier = require("streamifier");
-
 const express = require("express");
 const app = express();
 const path = require("path");
-
 const HTTP_PORT = process.env.PORT || 8080;
 const blogService = require("./blog-service.js");
 const exphbs = require("express-handlebars");
@@ -58,9 +56,9 @@ app.engine(
 app.set("view engine", "hbs");
 
 cloudinary.config({
-  cloud_name: "dhqs71hsf",
-  api_key: "761364992334917",
-  api_secret: "bc-nHvZVTwCxJL4xuxzO_PUnGFM",
+  cloud_name: "dxetbauyx",
+  api_key: "646543674724467",
+  api_secret: "niXD3n30lziZyvhFR0Yq7Q9DlV4",
   secure: true,
 });
 const upload = multer();
@@ -87,9 +85,17 @@ app.get("/", (req, res) => {
   res.redirect("/blog");
 });
 
+// app.get('/about', (req, res) => {
+//     res.sendFile(path.join(__dirname + "/views/about.html"));
+// });
+
 app.get("/about", (req, res) => {
   res.render("about");
 });
+
+// app.get('/posts/add', (req, res) => {
+//     res.render('addPost');
+// });
 
 app.get("/posts/add", async (req, res) => {
   try {
