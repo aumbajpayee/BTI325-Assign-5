@@ -58,9 +58,9 @@ app.engine(
 app.set("view engine", "hbs");
 
 cloudinary.config({
-  cloud_name: "dxetbauyx",
-  api_key: "646543674724467",
-  api_secret: "niXD3n30lziZyvhFR0Yq7Q9DlV4",
+  cloud_name: "dhqs71hsf",
+  api_key: "761364992334917",
+  api_secret: "bc-nHvZVTwCxJL4xuxzO_PUnGFM",
   secure: true,
 });
 const upload = multer();
